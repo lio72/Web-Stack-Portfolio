@@ -1,0 +1,22 @@
+# Base image
+FROM httpd:2.4
+
+# Create a non-root user and group
+RUN groupadd -r appuser && useradd -r -g appuser appuser
+
+# Change the ownership of the Apache directories to the non-root user
+RUN chown -R appuser:appuser /usr/local/apache2
+
+# Expose a non-privileged port
+EXPOSE 8080
+
+# Update Apache to listen on port 8080
+RUN sed -i 's/Listen 80/Listen 8080/' /usr/local/apache2/conf/httpd.conf
+
+# Add a custom HTML page
+COPY ./template/ /usr/local/apache2/htdocs/
+
+# Switch to the non-root user
+USER appuser
+# Start Apache server
+CMD ["httpd", "-D", "FOREGROUND"]
