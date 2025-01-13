@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session,flash
+from flask_login import LoginManager, login_required, login_user, logout_user, current_user,UserMixin
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
@@ -101,7 +102,34 @@ def home():
         return render_template('home/home.html', username=session['username'],title="Home")
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))    
+@app.route("/logout")
+def logout():
+    logout_user()
+    return render_template('auth/login.html')
 
+@app.route("/index")
+def index():
+    return render_template('index.html')
+
+@app.route("/login")
+def login1():
+    return render_template('auth/login.html')
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
+@app.route("/freelancer")
+def freelancer():
+    return render_template('freelancer.html')
+
+@app.route("/job")
+def job():
+    return render_template('job.html')
+
+@app.route("/sign-up")
+def register5():
+    return render_template('auth/register.html')
 
 @app.route('/profile')
 def profile():
