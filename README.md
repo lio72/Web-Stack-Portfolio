@@ -1,33 +1,9 @@
 # Web-Stack-Portfolio
-**projet name:** Interactive Quiz Application
+**projet name:** Job Finder Application
 **Project Scope**: Full-stack applications
 **Timeline:** 
 **Group Contribution:*YAMKAM DAKYAM LIONEL JOSPIN  and Adefemi Okesanya  
-
-
-pip install flask flask-bcrypt flask-wtf flask-sqlalchemy flask-login
-
-project/
-├── app/
-│   ├── __init__.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── forms.py
-│   ├── templates/
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   ├── dashboard.html
-│   └── static/
-├── config.py
-└── run.py
-
-
-requirement
-# Web-Stack-Portfolio
-**projet name:** Interactive Quiz Application
-**Project Scope**: Full-stack applications
-**Timeline:** 
-**Group Contribution:**   
+ 
 
 ## Login System with Python Flask and MySQL for Beginners
 
