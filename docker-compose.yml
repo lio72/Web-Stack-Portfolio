@@ -1,5 +1,5 @@
 version: '3.8'
-
+#use dockerfile in /app directory to build application and listen on 5000 port
 services:
   flask-app:
     build:
@@ -16,6 +16,7 @@ services:
     depends_on:
       - mysql
 
+# use official mysql image from docker hub to buil mysql database server on container
   mysql:
     image: mysql:8.0
     container_name: mysql2
