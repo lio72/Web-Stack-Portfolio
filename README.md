@@ -51,6 +51,7 @@ navigate in your project
 
 ```sql
 -- Create the  database named "loginapp"
+-- NB: it's not necessary to run thit create database loginapp because it's create during mysql database container build phase
 CREATE DATABASE loginapp;
 
 

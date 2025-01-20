@@ -18,5 +18,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Start Gunicorn to serve the Flask app
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
+CMD ["gunicorn", "--reload", "--bind", "0.0.0.0:5000", "main:app"]
 #CMD ["flask", "run"]

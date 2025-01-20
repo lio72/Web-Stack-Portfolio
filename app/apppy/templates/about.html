@@ -65,10 +65,10 @@
                 <a class="nav-link" href="{{ url_for('freelancer') }}">Freelancers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('logout') }}">
+                <a class="nav-link" href="{{ url_for('register') }}">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
-                    Logout1
+                    Logout
                   </span>
                 </a>
               </li>
@@ -138,23 +138,23 @@
             Menu
           </h4>
           <ul>
-            <li>
-              <a href="index.html">
+            <li class="active">
+              <a href="{{ url_for('index') }}">
                 Home
               </a>
             </li>
-            <li class="active">
-              <a href="about.html">
+            <li>
+              <a href="{{ url_for('about') }}">
                 About
               </a>
             </li>
             <li>
-              <a href="job.html">
+              <a class="" href="{{ url_for('job') }}">
                 Jobs
               </a>
             </li>
             <li>
-              <a href="freelancer.html">
+              <a class="" href="{{ url_for('freelancer') }}">
                 Freelancers
               </a>
             </li>
@@ -165,8 +165,7 @@
             Jobs
           </h4>
           <p>
-            Established fact that a reader will be distracted by the readable content of a page when looking at its
-            layout. The point of using Lorem Ipsum
+            find best job for your carreer  and try to improve your skill.
           </p>
         </div>
         <div class="col-md-3">

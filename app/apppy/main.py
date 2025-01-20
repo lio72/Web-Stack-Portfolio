@@ -6,8 +6,8 @@ import re
 
 
 app = Flask(__name__)
-
-# Change this to your secret key (can be anything, it's for extra protection)
+app.config["TEMPLATES_AUTO_RELOAD"] = True
+# Change this to your secret key    (can be anything, it's for extra protection)
 app.secret_key = '1a2b3c4d5e6d7g8h9i10'
 
 # Enter your database connection details below

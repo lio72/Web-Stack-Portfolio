@@ -66,10 +66,10 @@
                 <a class="nav-link" href="{{ url_for('freelancer') }}">Freelancers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('logout') }}">
+                <a class="nav-link" href="{{ url_for('register') }}">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
-                    Logout1
+                    Logout
                   </span>
                 </a>
               </li>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Make my website responsive device compatible
+                    Good luck !!!
                   </h5>
                   <div class="detail-info">
                     <h6>
@@ -351,22 +351,22 @@
           </h4>
           <ul>
             <li>
-              <a href="index.html">
+              <a href="{{ url_for('index') }}">
                 Home
               </a>
             </li>
             <li>
-              <a href="about.html">
+              <a href="{{ url_for('about') }}">
                 About
               </a>
             </li>
             <li>
-              <a class="active" href="job.html">
+              <a class="active" href="{{ url_for('job') }}">
                 Jobs
               </a>
             </li>
             <li>
-              <a href="freelancer.html">
+              <a href="{{ url_for('freelancer') }}">
                 Freelancers
               </a>
             </li>

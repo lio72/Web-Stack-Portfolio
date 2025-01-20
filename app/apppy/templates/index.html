@@ -66,10 +66,10 @@
                 <a class="nav-link" href="{{ url_for('freelancer') }}">Freelancers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('logout') }}">
+                <a class="nav-link" href="{{ url_for('register') }}">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
-                    Logout1
+                    Logout
                   </span>
                 </a>
               </li>
@@ -103,8 +103,8 @@
                 POWERFUL CAREER
               </h1>
               <p>
-                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                distribution of letters, as opposed to
+                This application is build by YAMKAM DAKYAM LIONEL JOSPIN and ADEFEMI OKESANYA for alx Specializations.
+                application allow Frelancers to find quikly job
               </p>
             </div>
           </div>
@@ -116,13 +116,15 @@
                 <form>
                   <div class="form-row ">
                     <div class="form-group col-lg-3">
-                      <input type="text" class="form-control" id="inputPatientName" placeholder="Keywords">
+                      <input type="file" class="form-control wide" id="inputDoctorName" name="fileUpload">
                     </div>
                     <div class="form-group col-lg-3">
                       <select name="" class="form-control wide" id="inputDoctorName">
-                        <option value="Normal distribution ">All Locations</option>
-                        <option value="Normal distribution ">Location 2 </option>
-                        <option value="Normal distribution ">Location 3 </option>
+                        <option value="Normal distribution ">AFRICA</option>
+                        <option value="Normal distribution ">UE</option>
+                        <option value="Normal distribution ">USA </option>
+                        <option value="Normal distribution ">ASIA </option>
+                        <option value="Normal distribution ">MIDDLE EAST</option>
                       </select>
                     </div>
                     <div class="form-group col-lg-3">
@@ -665,22 +667,22 @@
           </h4>
           <ul>
             <li class="active">
-              <a href="index.html">
+              <a href="{{ url_for('index') }}">
                 Home
               </a>
             </li>
             <li>
-              <a href="about.html">
+              <a href="{{ url_for('about') }}">
                 About
               </a>
             </li>
             <li>
-              <a class="" href="job.html">
+              <a class="" href="{{ url_for('job') }}">
                 Jobs
               </a>
             </li>
             <li>
-              <a class="" href="freelancer.html">
+              <a class="" href="{{ url_for('freelancer') }}">
                 Freelancers
               </a>
             </li>
@@ -691,8 +693,7 @@
             Jobs
           </h4>
           <p>
-            Established fact that a reader will be distracted by the readable content of a page when looking at its
-            layout. The point of using Lorem Ipsum
+            find best job for your carreer  and try to improve your skill.
           </p>
         </div>
         <div class="col-md-3">

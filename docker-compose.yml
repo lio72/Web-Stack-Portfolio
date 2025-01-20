@@ -13,6 +13,8 @@ services:
       DB_NAME: flaskdb
       DB_USER: flaskuser
       DB_PASSWORD: flaskpassword
+    volumes:
+      - ./app/apppy/:/app
     depends_on:
       - mysql
 
