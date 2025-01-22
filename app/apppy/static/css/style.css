@@ -5,6 +5,40 @@ body {
   overflow-x: hidden;
 }
 
+.inputfile-box {
+  position: relative;
+}
+
+.inputfile {
+  background: rgb(237, 230, 230);
+  display: none;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+}
+
+.file-box {
+  background: rgb(237, 230, 230);
+  display: inline-block;
+  width: 100%;
+  border: 1px solid;
+  padding: 5px 0px 5px 5px;
+  box-sizing: border-box;
+  height: calc(2rem - 2px);
+}
+
+.file-button {
+  background: rgb(130, 4, 4);
+  padding: 5px;
+  position: absolute;
+  border: 1px solid;
+  top: 0px;
+  right: 0px;
+}
+
+
 .layout_padding {
   padding: 90px 0;
 }

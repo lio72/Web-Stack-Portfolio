@@ -119,6 +119,10 @@ def login1():
 def about():
     return render_template('about.html')
 
+@app.route("/success")
+def success():
+    return render_template('success.html')
+
 @app.route("/freelancer")
 def freelancer():
     return render_template('freelancer.html')
