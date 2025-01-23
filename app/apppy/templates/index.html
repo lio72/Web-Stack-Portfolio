@@ -41,9 +41,9 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="{{ url_for('home')}}">
             <span>
-              ALX-WEBSTAK-PORFOLIO
+              ALX-WEBSTACK-PORFOLIO
             </span>
           </a>
 
@@ -65,14 +65,23 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('freelancer') }}">Freelancers</a>
               </li>
+              {% if 'loggedin' in session %}
+              
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('register') }}">
+                <a class="nav-link" href="{{ url_for('job') }}">Jobs</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
-                    Logout
+                    Logout 
                   </span>
                 </a>
               </li>
+
+              {% else %}
+
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('register') }}">
                   <i class="fa fa-user" aria-hidden="true"></i>
@@ -81,6 +90,17 @@
                   </span>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Login
+                  </span>
+                </a>
+              </li>
+
+              {% endif  %}
               <form class="form-inline">
                 <button class="btn   nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>

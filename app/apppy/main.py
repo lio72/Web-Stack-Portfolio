@@ -23,7 +23,7 @@ mysql = MySQL(app)
 
 
 # http://localhost:5000/pythonlogin/ - this will be the login page, we need to use both GET and POST requests
-@app.route('/pythonlogin/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
 # Output message if something goes wrong...
     # Check if "username" and "password" POST requests exist (user submitted form)
@@ -56,7 +56,7 @@ def login():
 
 # http://localhost:5000/pythonlogin/register 
 # This will be the registration page, we need to use both GET and POST requests
-@app.route('/pythonlogin/register', methods=['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     # Check if "username", "password" and "email" POST requests exist (user submitted form)
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
@@ -99,13 +99,18 @@ def home():
     # Check if user is loggedin
     if 'loggedin' in session:
         # User is loggedin show them the home page
-        return render_template('home/home.html', username=session['username'],title="Home")
+        return render_template('index.html', username=session['username'],title="Home")
     # User is not loggedin redirect to login page
-    return redirect(url_for('login'))    
+    return render_template('index.html')    
+
 @app.route("/logout")
 def logout():
-    logout_user()
-    return render_template('auth/login.html')
+    if 'loggedin' in session:
+        session.pop('loggedin', None)  # Remove 'loggedin' from the session
+        session.pop('user_id', None)  # Remove additional session data if present
+        # You can also clear the entire session if needed:
+        session.clear()    
+    return redirect(url_for('home'))  # Redirect to home if not logged in
 
 @app.route("/index")
 def index():
