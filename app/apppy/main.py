@@ -119,6 +119,7 @@ def login1():
 def about():
     return render_template('about.html')
 
+# for redirect after apply
 @app.route("/success")
 def success():
     return render_template('success.html')
