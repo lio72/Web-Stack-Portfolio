@@ -52,10 +52,10 @@ navigate in your project
 ```sql
 -- Create the  database named "loginapp"
 -- NB: it's not necessary to run thit create database loginapp because it's create during mysql database container build phase
-CREATE DATABASE loginapp;
 
 
--- Switch to 'loginapp' database; 
+
+-- Switch to 'loginapp' database : this database is create with docker in docker-compose file; 
 USE loginapp; 
 
 
