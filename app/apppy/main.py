@@ -94,6 +94,7 @@ def register():
 # http://localhost:5000/pythinlogin/home 
 # This will be the home page, only accessible for loggedin users
 
+#server home page
 @app.route('/')
 def home():
     # Check if user is loggedin
