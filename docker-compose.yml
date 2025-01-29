@@ -17,7 +17,7 @@ services:
       - ./app/apppy/:/app
     depends_on:
       - mysql
-
+# after mysql container run and build, you will create table in  loginapp database
 # use official mysql image from docker hub to buil mysql database server on container
   mysql:
     image: mysql:8.0
