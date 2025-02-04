@@ -47,7 +47,7 @@ Depending on your operating system,make a virtual environment to avoid messing w
 **Windows or linux** 
           
 navigate in your project
-### 6. Create the database and table 
+### 3. Create the database and table 
 
 ```sql
 -- Create the  database named "loginapp"
@@ -68,7 +68,7 @@ CREATE TABLE accounts (
 ); 
 ```
 
-### 6. Run the application 
+### 4. Run the application 
 
 cd good-web-stack-portfolio
 docker compose up -d
