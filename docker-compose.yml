@@ -3,6 +3,7 @@ version: '3.8'
 services:
   flask-app:
     build:
+# in /app folder, we have dockerfile that's use to build application      
       context: ./app
     container_name: flask-app
     ports:
