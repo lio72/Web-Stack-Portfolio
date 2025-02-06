@@ -103,6 +103,7 @@ def home():
         return render_template('home/home.html', username=session['username'],title="Home")
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))    
+    
 @app.route("/logout")
 def logout():
     logout_user()
